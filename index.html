@@ -1,4 +1,21 @@
 <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<script>
+const PASS = "Cloud2026!";
+if (!sessionStorage.getItem("auth")) {
+  var p = prompt("Password:");
+  if (p !== PASS) {
+    alert("Accesso negato");
+    window.location.href = "about:blank";
+  } else {
+    sessionStorage.setItem("auth", "ok");
+  }
+}
+</script>
+<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
